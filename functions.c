@@ -11,3 +11,10 @@ float sub(float a, float b)
 {
     return a - b;
 }
+
+
+// Fonction multiplication : calculates and returns the product of two numbers
+float mul(float a, float b)
+{
+    return a * b;
+}

@@ -36,8 +36,13 @@ int main(void)
         /* code */
         result = sub(a, b);
         break;
+
+    case 3:
+        /* code */
+        result = mul(a, b);
+        break;
     }
 
-    printf("Result = %.2f\n", result);
+    printf("Resultat = %.2f\n", result);
     return 0;
 }
