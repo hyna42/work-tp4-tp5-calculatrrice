@@ -70,8 +70,8 @@ make clean
 ## Options (dans le Makefile)
 `-std=c2x -pedantic -Wall -Wextra -Werror`
 
-## Test 
-Before 
+## Tests
+### Before 
 ![alt text](img/before.png)
-After
+### After
 ![alt text](img/after.png)
