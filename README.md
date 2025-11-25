@@ -2,18 +2,23 @@
 
 _<u>**Définition**</u> : une librairie est un ensemble de fonctions déjà compliquées qu'on peut directement utilisées_
 
-## A - LIBRAIRIES STATIQUES 
-> _Les Librairies statiques sont intégrées directement dans le programmme exécutbale au moment de la compilation_
+## A - LIBRAIRIES STATIQUES
 
+> ➡️ _Les Librairies statiques sont intégrées directement dans le programmme exécutbale au moment de la compilation_
+
+### Compilation de main.c -> main.o
+
+> - Aller dans le rep /app : `cd ../../app`
+> - Lancer `gcc -std=c2x -pedantic -Wall -Wextra -Werror -c main.c -o ../build/main.o`
 
 ### 1. compiler la lib (calc.c -> calc.o)
 
-> - Aller dans le répertoir /staticCalculatrice :  `cd /lib/staticCalculatrice`
+> - Aller dans le répertoir /staticCalculatrice : `cd lib/staticCalculatrice/`
 > - Lancer la commande : `gcc -std=c2x -pedantic -Wall -Wextra -Werror -c calc.c -o ../../build/calc.o`
 
-### 2. Créer l'archive de la lib statique (.a) avec la commande ar
+### 2. Créer l'archive (la lib statique) (.a) avec la commande ar
 
-> - Toujours dans répertoir `lib/staticCalculatrice`
+> - Toujours dans répertoir /staticCalculatrice
 > - Lancer la commande : `ar rcs libStaticCal.a ../../build/calc.o`
 
 Où :
@@ -22,14 +27,10 @@ Où :
 - `c` : pour créé l'archive si elle n'existe pas
 - `s` : pour créé un index équivalent à (randlib)
 
-### 3. Compilation de main.c -> main.o
 
-> - Aller dans le rep /app/ : `cd ../../src/app`
-> - Lancer `gcc -std=c2x -pedantic -Wall -Wextra -Werror -c main.c -o ../build/main.o`
+### 3. Lier main avec la lib statique
 
-### 4. Lier main avec la lib statique
-
-> - Toujours Dans `src/app/`
+> - Toujours Dans /app
 > - Lancer `gcc ../build/main.o -L../lib/staticCalculatrice -lStaticCal -o ../bin/prog`
 
 Où :
@@ -38,8 +39,25 @@ Où :
 
 - L'option `-l` pour "Librairy name" : désigne le nom de la librairie que le GCC doit checher à lier, ici c'est la lib `libStaticCal.a`
 
-### 5. Lancer le proggramme 
+### 4. Lancer le proggramme
 `../bin/prog`
 
+## B - LIBRAIRIES DYNAMIQUES
 
-## B - LIBS. DYNAMIQUES
+> ➡️ _Les Librairies dynamiques (Shared Library) ou Librairies Partagées ne sont pas intégrées au programme, elle sont chargées au moment de l'exécution. Un .so (Linux)/.dll(windows)/.dylib(MacOs) doit être présent dans le système à l'exécution. Les libs dynamiques permettent sont présents dans plusieurs programmes modernes, car elles permettent de màj le code sans recompiler l'exécutable, mais aussi elles permettent de réduire la taille de l'éxecutable_
+
+### Compilation de main.c -> main.o
+> - Dans /app `cd ../../app` - lancer  `gcc -std=c2x -pedantic -Wall -Wextra -Werror -c main.c -o ../build/main.o`
+
+### 1. Compiler la lib avec l'option `-fPIC` (Position Independant Code) : calc.c -> calc.o
+> - Dans /staticCalculatrice : `gcc -std=c2x -pedantic -Wall -Wextra -Werror -fPIC -c calc.c -o ../../build/calc.o`
+
+### 2. Créer la librairie dynamique .so : `libDynamicCal.so` (je suis sur la distribution WSL, donc Linux = .so)
+> - Dans /staticCalculatrice : `gcc -shared -o libDynamicCal.so ../../build/calc.o`
+
+
+### 3. Lier le .so dans le main
+> - Dans /app `cd ../../app` - lancer `gcc ../build/main.o -L../lib/staticCalculatrice -lStaticCal -o ../bin/prog`
+
+### 4. Lancer le proggramme
+`../bin/prog`
