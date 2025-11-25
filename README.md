@@ -1,4 +1,4 @@
-# TP6 — Les Librairies Statiques et Dynamqiues : compilation manuelle
+# TP6 — Les Librairies Statiques et Dynamiques : compilation manuelle
 
 _<u>**Définition**</u> : une librairie est un ensemble de fonctions déjà compliquées qu'on peut directement utilisées_
 
