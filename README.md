@@ -1,10 +1,10 @@
 # TP6 — Les Librairies Statiques et Dynamiques : compilation Makefile
-_<u>**Définition**</u> : une librairie est un ensemble de fonctions déjà compliquées qu'on peut directement utilisées_
+_<u>**Définition**</u> : une librairie est un ensemble de fonctions déjà compliquées qu'on peut directement utiliser_
 
 
-> ➡️ _Les Librairies statiques sont intégrées directement dans le programmme exécutbale au moment de la compilation_
+> ➡️ _Les Librairies statiques sont **INTEGREES directement dans le programmme** exécutable au moment de la compilation. Lors de la phase de d'édition des liens, le code des fonctions utilisées dans la librairie est copié intégralement dans le fichier exécutable final. Le programme n'aura plus besoin de la librairie une fois compilé_
 
-> ➡️ _Les Librairies dynamiques (Shared Library) ou Librairies Partagées ne sont pas intégrées au programme, elle sont chargées au moment de l'exécution. Un .so (Linux)/.dll(windows)/.dylib(MacOs) doit être présent dans le système à l'exécution. Les libs dynamiques permettent sont présents dans plusieurs programmes modernes, car elles permettent de màj le code sans recompiler l'exécutable, mais aussi elles permettent de réduire la taille de l'éxecutable_
+> ➡️ _Les Librairies dynamiques (Shared Library) encore appelées "Librairies Partagées" ne sont pas intégrées dans le programme à la compilation (contrairement aux libs statiques), elle sont plutôt **CHARGEES au moment de l'exécution**. Pour cela un fichier ***.so (Linux)/.dll(windows)/.dylib(MacOs)*** doit être présent dans le système à l'exécution. Les libs dynamiques sont présents dans plusieurs programmes modernes (Python,etc), car elles permettent de mettre à jour le code sans recompiler l'exécutable, mais aussi elles permettent de réduire la taille de l'éxecutable_
 
 ### 1.Compilation
 
