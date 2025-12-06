@@ -1,0 +1,3 @@
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/src/build/CMakeFiles/app.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/src/build/CMakeFiles/edit_cache.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/src/build/CMakeFiles/rebuild_cache.dir
