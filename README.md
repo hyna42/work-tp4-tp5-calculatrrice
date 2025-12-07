@@ -15,4 +15,4 @@ Avec 2 modes de construction  : une compilation **manuelle** étape par étape 
 
 - 📄 [TP7 - CMAKE - Q1 : Hello-World ](https://github.com/hyna42/work-tp4-tp6-calculatrrice/tree/tp7-cmake-hello_world/src)
 
-- 📄 [TP7 - CMAKE - Q2 : Calculatrice ](https://github.com/hyna42/work-tp4-tp6-calculatrrice/tree/tp7-cmake-calculatrice/src)
+- 📄 [TP7 - CMAKE - Q2 : Calculatrice ](https://github.com/hyna42/work-tp4-tp6-calculatrrice/tree/tp7-cmake-calculatrice?tab=readme-ov-file)
