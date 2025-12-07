@@ -63,16 +63,130 @@ CMAKE_BINARY_DIR = /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/app.dir/all
+all: lib/dynamicCalculatrice/all
+all: lib/staticCalculatrice/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: lib/dynamicCalculatrice/preinstall
+preinstall: lib/staticCalculatrice/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/app.dir/clean
+clean: lib/dynamicCalculatrice/clean
+clean: lib/staticCalculatrice/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/dynamicCalculatrice
+
+# Recursive "all" directory target.
+lib/dynamicCalculatrice/all: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all
+.PHONY : lib/dynamicCalculatrice/all
+
+# Recursive "preinstall" directory target.
+lib/dynamicCalculatrice/preinstall:
+.PHONY : lib/dynamicCalculatrice/preinstall
+
+# Recursive "clean" directory target.
+lib/dynamicCalculatrice/clean: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/clean
+.PHONY : lib/dynamicCalculatrice/clean
+
+#=============================================================================
+# Directory level rules for directory lib/staticCalculatrice
+
+# Recursive "all" directory target.
+lib/staticCalculatrice/all: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
+.PHONY : lib/staticCalculatrice/all
+
+# Recursive "preinstall" directory target.
+lib/staticCalculatrice/preinstall:
+.PHONY : lib/staticCalculatrice/preinstall
+
+# Recursive "clean" directory target.
+lib/staticCalculatrice/clean: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/clean
+.PHONY : lib/staticCalculatrice/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/app.dir
+
+# All Build rule for target.
+CMakeFiles/app.dir/all: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
+CMakeFiles/app.dir/all: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles --progress-num=1,2 "Built target app"
+.PHONY : CMakeFiles/app.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 0
+.PHONY : CMakeFiles/app.dir/rule
+
+# Convenience name for target.
+app: CMakeFiles/app.dir/rule
+.PHONY : app
+
+# clean rule for target.
+CMakeFiles/app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/clean
+.PHONY : CMakeFiles/app.dir/clean
+
+#=============================================================================
+# Target rules for target lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir
+
+# All Build rule for target.
+lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles --progress-num=3,4 "Built target calcDynamic"
+.PHONY : lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all
+
+# Build rule for subdir invocation for target.
+lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 0
+.PHONY : lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule
+
+# Convenience name for target.
+calcDynamic: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule
+.PHONY : calcDynamic
+
+# clean rule for target.
+lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/clean
+.PHONY : lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/clean
+
+#=============================================================================
+# Target rules for target lib/staticCalculatrice/CMakeFiles/calcStatic.dir
+
+# All Build rule for target.
+lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build.make lib/staticCalculatrice/CMakeFiles/calcStatic.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build.make lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles --progress-num=5,6 "Built target calcStatic"
+.PHONY : lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
+
+# Build rule for subdir invocation for target.
+lib/staticCalculatrice/CMakeFiles/calcStatic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 0
+.PHONY : lib/staticCalculatrice/CMakeFiles/calcStatic.dir/rule
+
+# Convenience name for target.
+calcStatic: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/rule
+.PHONY : calcStatic
+
+# clean rule for target.
+lib/staticCalculatrice/CMakeFiles/calcStatic.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build.make lib/staticCalculatrice/CMakeFiles/calcStatic.dir/clean
+.PHONY : lib/staticCalculatrice/CMakeFiles/calcStatic.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

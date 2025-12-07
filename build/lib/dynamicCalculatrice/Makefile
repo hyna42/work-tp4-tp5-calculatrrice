@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/dynamicCalculatrice//CMakeFiles/progress.marks
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,81 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named app
+# Convenience name for target.
+lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule:
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule
+.PHONY : lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule
 
-# Build rule for target.
-app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
-.PHONY : app
-
-# fast build rule for target.
-app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-.PHONY : app/fast
-
-#=============================================================================
-# Target rules for targets named calcDynamic
-
-# Build rule for target.
-calcDynamic: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calcDynamic
+# Convenience name for target.
+calcDynamic: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/rule
 .PHONY : calcDynamic
 
 # fast build rule for target.
 calcDynamic/fast:
-	$(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build
 .PHONY : calcDynamic/fast
 
-#=============================================================================
-# Target rules for targets named calcStatic
-
-# Build rule for target.
-calcStatic: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calcStatic
-.PHONY : calcStatic
-
-# fast build rule for target.
-calcStatic/fast:
-	$(MAKE) $(MAKESILENT) -f lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build.make lib/staticCalculatrice/CMakeFiles/calcStatic.dir/build
-.PHONY : calcStatic/fast
-
-src/main.o: src/main.c.o
-.PHONY : src/main.o
+dynamicCal.o: dynamicCal.c.o
+.PHONY : dynamicCal.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.c.o
-.PHONY : src/main.c.o
+dynamicCal.c.o:
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/dynamicCal.c.o
+.PHONY : dynamicCal.c.o
 
-src/main.i: src/main.c.i
-.PHONY : src/main.i
+dynamicCal.i: dynamicCal.c.i
+.PHONY : dynamicCal.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.c.i
-.PHONY : src/main.c.i
+dynamicCal.c.i:
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/dynamicCal.c.i
+.PHONY : dynamicCal.c.i
 
-src/main.s: src/main.c.s
-.PHONY : src/main.s
+dynamicCal.s: dynamicCal.c.s
+.PHONY : dynamicCal.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.c.s
-.PHONY : src/main.c.s
+dynamicCal.c.s:
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(MAKE) $(MAKESILENT) -f lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/build.make lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/dynamicCal.c.s
+.PHONY : dynamicCal.c.s
 
 # Help Target
 help:
@@ -187,12 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... app"
 	@echo "... calcDynamic"
-	@echo "... calcStatic"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... dynamicCal.o"
+	@echo "... dynamicCal.i"
+	@echo "... dynamicCal.s"
 .PHONY : help
 
 
@@ -204,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

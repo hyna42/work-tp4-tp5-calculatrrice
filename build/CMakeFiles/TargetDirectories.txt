@@ -1,2 +1,9 @@
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles/app.dir
 /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles/edit_cache.dir
 /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/dynamicCalculatrice/CMakeFiles/edit_cache.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/dynamicCalculatrice/CMakeFiles/rebuild_cache.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/staticCalculatrice/CMakeFiles/calcStatic.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/staticCalculatrice/CMakeFiles/edit_cache.dir
+/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/staticCalculatrice/CMakeFiles/rebuild_cache.dir

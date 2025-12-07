@@ -1,5 +1,5 @@
 # Création de la lib bibliothèque statique calcDynamic.so
-add_library(calcDynamic SHARED dynamicCalc.c)
+add_library(calcDynamic SHARED dynamicCal.c)
 
 
 #  Exposer les entêtes .h à l'exécutable

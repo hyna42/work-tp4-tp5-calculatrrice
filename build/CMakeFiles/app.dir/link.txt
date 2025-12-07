@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/app.dir/src/main.c.o -o app  -Wl,-rpath,/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/lib/dynamicCalculatrice lib/staticCalculatrice/libcalcStatic.a lib/dynamicCalculatrice/libcalcDynamic.so 

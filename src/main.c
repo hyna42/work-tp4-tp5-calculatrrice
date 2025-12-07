@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../lib/dynamicCalculatrice/dynamicCalc.h"
-#include "../lib/staticCalculatrice/staticCalc.h"
+#include "../lib/dynamicCalculatrice/dynamicCal.h"
+#include "../lib/staticCalculatrice/staticCal.h"
 
 int main(void)
 
@@ -11,24 +11,35 @@ int main(void)
     // #########################################
     unsigned int opType = 0;
     int a = 0, b = 0;
-    printf("Choisir le type de l'opération : addition (1) - soustraction (2) - multiplication (3) - division (4)");
-    scanf("%d", &opType);
 
-    printf("Choisir deux entiers (format exacte avec virgule, ex 5,3 ) %d, %d", a, b);
+    do
+    {
+        printf("Choisir le type de l'opération\n------------------------------ \nAddition (1)\nSoustraction (2)\nMultiplication (3)\nDivision (4)\n------------------------------\n: ");
+        scanf("%d", &opType);
+
+        if (opType > 4 || opType < 1)
+        {
+
+            printf("Type d'opération invalide, le nombre doit etre compris entre 1 et 4\n");
+        }
+
+    } while (opType < 1 || opType > 4);
+
+    printf("Choisir deux entiers (format exacte avec virgule, ex 5,3 ) : ");
     scanf("%d, %d", &a, &b);
 
     switch (opType)
     {
     case 1:
-        printf("Addition %d + %d = %d", a, b, dynamicAddition(a, b));
+        printf("L'addition de %d + %d = %d\n", a, b, dynamicAddition(a, b));
         break;
     case 2:
-        printf("Soustraction %d - %d = %d", a, b, dynamicSoustraction(a, b));
+        printf("La soustraction de %d - %d = %d\n", a, b, dynamicSoustraction(a, b));
 
         break;
 
     case 3:
-        printf("Multiplication %d * %d = %d", a, b, staticMultiplication(a, b));
+        printf("La multiplication de %d * %d = %d\n", a, b, staticMultiplication(a, b));
         break;
 
     case 4:
@@ -38,7 +49,7 @@ int main(void)
             break;
         }
 
-        printf("Multiplication %d * %d = %d", a, b, staticDivision(a, b));
+        printf("La division de %d par %d = %.2f\n", a, b, staticDivision(a, b));
         break;
 
     default:

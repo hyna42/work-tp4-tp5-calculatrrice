@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcalcStatic.a CMakeFiles/calcStatic.dir/staticCal.c.o
+/usr/bin/ranlib libcalcStatic.a
