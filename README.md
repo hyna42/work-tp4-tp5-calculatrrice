@@ -2,46 +2,56 @@
 <u>**Définition**</u> : **CMAKE** est un système de construction (Build System) Multiplateforme qui permet de génèrer des fichiers de configuration pour d'autres outils de compilation telsque le `Makefile` afin de compiler le projet partout avec n'importe quel outil, sans toucher au code.
 
 
-## 1. Commence par la création d'un `CMakeLists.txt` principal à la racine du projet : 
-    - le nom du projet : `project(calculatrice C)
-    
+## 1. Création du `CMakeLists.txt` principal à la racine : 
+```CMake
+cmake_minimum_required(VERSION 3.10)
+project(calculatrice C)
 
-## 2. Creer le dossier build/ puis lancer `cmake` 
-![alt text](/assets/cmake_build_init.png)
+add_subdirectory(lib/dynamicCalculatrice)
+add_subdirectory(lib/staticCalculatrice)
 
+add_executable(app src/main.c)
 
-## 3. Ajout des sous-répertoires lib/  et src/  dans le ficher CMakeLists.tsx principal avec la commande `add_subdirectory(source_dir)`
+target_link_libraries(app calcStatic calcDynamic)
+```
+Ici on :
+* définit la version minimale de CMake ;
+* déclare le projet calculatrice en langage C ;
+* ajoute les deux sous-répertoires contenant les bibliothèques ;
+* crée l’exécutable app à partir de src/main.c ;
+* lie l’exécutable avec les bibliothèques calcStatic et calcDynamic.
 
-## 4. Creer la lib statique `calcStatic.a` PUIS Exposer ses entêtes à l'exécutable `lib/staticCalculatrice/CMakeLists.txt`
+## 2. Créer la lib. statique `calcStatic.a` 
 ![alt text](/assets/staticLib.png)
+Ici on :
+* crée une bibliothèque statique (calcStatic.a) à partir du fichier staticCal.c ;
+* rend le dossier contenant staticCal.h accessible à l'exécutable via target_include_directories ;
+* permet à l’exécutable d’utiliser les fonctions de **multiplication** et **division** définies dans cette lib.
 
-## 5. Créer la lib dynamique `calcDynamic.so` PUIS Exposer ses entêtes à l'exécutable `lib/dynamicCalculatrice/CMakeLists.txt`
+## 3. Créer la lib. dynamique `calcDynamic.so` 
 ![alt text](/assets/dynamicLib.png)
+Ici on : 
+* crée une bibliothèque dynamique (calcDynamic.so) basée sur dynamicCal.c ;
+* expose le dossier contenant dynamicCal.h pour que l'exécutable puisse l'inclure ;
+* fournit les fonctions d’**addition** et de **soustraction** via cette lib au moment de l’exécution.
+
+## 4. Générer les fichiers de configurations :
+- crééer un dosier isolé build pour tous les fichiers générés par CMake : `mkdir build/`
+- entrer dans le dossier : `cd build`
+- Exécuter `cmake ..` pour analyser le projet et produire le Makefile
 
 
-## 5. Créer l'exécutable `app` avec `add_executable(app main.c)` PUIS lier les libs. avec `target_link_libraries(app calcStatic calcDynamic)`
+## 5. Copilation duprojet avec la commande `make`
+Ici on :
+- lance la compilation à partir du Makefile généré par CMake ;
+- construit les **bibliothèques** (.a et .so) ainsi que  **l’exécutable** `app`
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 6. Lancer le projet `./app`
 
 
 
-
+## TETS D'EXECUTIONS 
 
 
 
@@ -66,28 +76,3 @@
 
 
 
-
-
-
-
-
-<!-- 
-2. création du dossier build  dans src/ afin de respecter le standard CMake `out-of-source build`  L'avantage de cette méthode c'est qu'on peut supprimer build/ pour tout nettoyer, tout en gardant le code source propre
-
-3. Construction des fichiers sources du projet comportant depuis /build avec la commande `cmake ../app`
-
-Cette commande permet de créer entre autres :
-- Le dossier `CMakeFiles/`
-- Le fichier `CMakeCache.txt`
-- Le ficher `Makefile`
-
-![alt text](/assets/cmake_init.png)
-
-4. Dans /build , on lance la commande `make` pour générre l'éxécutable **`app`** pour lancer le projet.
-
-![alt text](/assets/create-exec.png)
-
-On peut ensuite tester le programme avec la commande `./app` pour afficher notre ***'hello world'***
-![alt text](/assets/test-run-app.png)
-
-# arborescence -->
