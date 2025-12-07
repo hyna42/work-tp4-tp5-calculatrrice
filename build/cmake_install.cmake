@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/src/app
+# Install script for directory: /mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
