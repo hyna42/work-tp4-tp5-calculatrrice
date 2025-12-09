@@ -1,10 +1,21 @@
 #include "staticCal.h"
 
-int staticMultiplication(int a, int b)
+float staticAddition(float a, float b)
+{
+    return (a + b);
+}
+
+float staticSoustraction(float a, float b)
+{
+    return (a - b);
+}
+
+float staticMultiplication(float a, float b)
 {
     return (a * b);
 }
-float staticDivision(int a, int b)
+
+float staticDivision(float a, float b)
 {
-    return (float)a / b;
+    return a / b;
 }
