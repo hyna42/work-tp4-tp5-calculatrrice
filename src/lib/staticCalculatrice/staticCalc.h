@@ -1,9 +1,9 @@
 #ifndef STATIC_CALC_H
 #define STATIC_CALC_H
 
-// int staticAddition(int a, int b);
-// int staticSoustraction(int a, int b);
-int staticMultiplication(int a, int b);
-float staticDivision(int a, int b);
+float staticAddition(float a, float b);
+float staticSoustraction(float a, float b);
+float staticMultiplication(float a, float b);
+float staticDivision(float a, float b);
 
 #endif

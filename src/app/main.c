@@ -8,7 +8,7 @@ int main(void)
     puts("********## CALCULATRICE : LIBRAIRIES STATIQUES ET PARTAGEES ##********");
 
     unsigned int opType = 0;
-    int a = 0, b = 0;
+    float a, b, s_result, d_result;
 
     do
     {
@@ -18,26 +18,42 @@ int main(void)
         if (opType > 4 || opType < 1)
         {
 
-            printf("Type d'opération invalide, le nombre doit etre compris entre 1 et 4\n");
+            printf("Opération invalide, le nombre doit etre compris entre 1 et 4\n");
         }
 
     } while (opType < 1 || opType > 4);
 
-    printf("Choisir deux entiers (format exacte avec virgule, ex 5,3 ) : ");
-    scanf("%d, %d", &a, &b);
+    printf("Choisir deux entiers (format avec virgule, ex: 5,3 ) : ");
+    scanf("%f, %f", &a, &b);
 
     switch (opType)
     {
     case 1:
-        printf("L'addition de %d + %d = %d\n", a, b, dynamicAddition(a, b));
+        d_result = dynamicAddition(a, b);
+        s_result = staticAddition(a, b);
+
+        printf("[DYNAMIC] addition : %.2f + %.2f = %.2f\n", a, b, d_result);
+
+        printf("[STATIC] addition : %.2f + %.2f = %.2f\n", a, b, s_result);
         break;
     case 2:
-        printf("La soustraction de %d - %d = %d\n", a, b, dynamicSoustraction(a, b));
+        d_result = dynamicSoustraction(a, b);
+        s_result = staticSoustraction(a, b);
+
+        printf("[DYNAMIC] soustraction : %.2f + %.2f = %.2f\n", a, b, d_result);
+
+        printf("[STATIC] soustraction : %.2f + %.2f = %.2f\n", a, b, s_result);
 
         break;
 
     case 3:
-        printf("La multiplication de %d * %d = %d\n", a, b, staticMultiplication(a, b));
+        d_result = dynamicMultiplication(a, b);
+        s_result = staticMultiplication(a, b);
+
+        printf("[DYNAMIC] multiplication : %.2f + %.2f = %.2f\n", a, b, d_result);
+
+        printf("[STATIC] multiplication : %.2f + %.2f = %.2f\n", a, b, s_result);
+
         break;
 
     case 4:
@@ -47,7 +63,13 @@ int main(void)
             break;
         }
 
-        printf("La division de %d par %d = %.2f\n", a, b, staticDivision(a, b));
+        d_result = dynamicDivision(a, b);
+        s_result = staticDivision(a, b);
+
+        printf("[DYNAMIC] division : %.2f + %.2f = %.2f\n", a, b, d_result);
+
+        printf("[STATIC] division : %.2f + %.2f = %.2f\n", a, b, s_result);
+
         break;
 
     default:

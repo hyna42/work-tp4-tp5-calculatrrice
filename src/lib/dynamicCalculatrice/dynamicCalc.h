@@ -1,9 +1,9 @@
 #ifndef DYNAMIC_CALC_H
 #define DYNAMIC_CALC_H
 
-int dynamicAddition(int a, int b);
-int dynamicSoustraction(int a, int b);
-// int dynamicMultiplication(int a, int b);
-// float dynamicDivision(int a, int b);
+float dynamicAddition(float a, float b);
+float dynamicSoustraction(float a, float b);
+float dynamicMultiplication(float a, float b);
+float dynamicDivision(float a, float b);
 
 #endif
