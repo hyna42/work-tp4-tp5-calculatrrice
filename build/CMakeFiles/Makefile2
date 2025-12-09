@@ -113,8 +113,8 @@ lib/staticCalculatrice/clean: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/c
 # Target rules for target CMakeFiles/app.dir
 
 # All Build rule for target.
-CMakeFiles/app.dir/all: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
 CMakeFiles/app.dir/all: lib/dynamicCalculatrice/CMakeFiles/calcDynamic.dir/all
+CMakeFiles/app.dir/all: lib/staticCalculatrice/CMakeFiles/calcStatic.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/IT/TECHNOS/C/work_with_aymard/tp4_calculatrice/build/CMakeFiles --progress-num=1,2 "Built target app"

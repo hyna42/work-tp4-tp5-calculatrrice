@@ -46,7 +46,7 @@ Ici on :
 
 - crééer un dosier isolé build pour tous les fichiers générés par CMake : `mkdir build`
 - entrer dans le dossier : `cd build`
-- Exécuter `cmake ..` pour analyser le projet et produire le Makefile
+- Exécuter `cmake ..` pour analyser le projet et produire le ***Makefile***
 
 ## 5. Copilation duprojet avec la commande `make`
 
